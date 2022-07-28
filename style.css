@@ -58,6 +58,10 @@ main .card .card-content .plan .change-plan {
   font-size: 14px;
   color: hsl(245deg, 75%, 52%);
 }
+main .card .card-content .plan .change-plan:hover {
+  text-decoration: none;
+  color: hsl(224deg, 23%, 55%);
+}
 main .card .card-content .payment-button {
   background-color: hsl(245deg, 75%, 52%);
   color: hsl(225deg, 100%, 98%);
@@ -67,9 +71,15 @@ main .card .card-content .payment-button {
   font-size: 14px;
   font-weight: 700;
 }
+main .card .card-content .payment-button:hover {
+  background-color: hsl(224deg, 23%, 55%);
+}
 main .card .card-content .cancel-order {
   text-decoration: none;
   color: hsl(224deg, 23%, 55%);
   font-weight: 700;
   font-size: 14px;
+}
+main .card .card-content .cancel-order:hover {
+  color: hsl(223deg, 47%, 23%);
 }/*# sourceMappingURL=style.css.map */

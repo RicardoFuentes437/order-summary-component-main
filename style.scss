@@ -69,6 +69,11 @@ main{
                     font-weight: 700;
                     font-size: 14px;
                     color: $Bright-blue;
+
+                    &:hover{
+                        text-decoration: none;
+                        color: $Desaturated-blue;
+                    }
                 }
             }
 
@@ -80,6 +85,10 @@ main{
                 align-self: center;
                 font-size: 14px;
                 font-weight: 700;
+
+                &:hover{
+                    background-color: $Desaturated-blue;
+                }
             }
 
             .cancel-order{
@@ -87,6 +96,10 @@ main{
                 color: $Desaturated-blue;
                 font-weight: 700;
                 font-size: 14px;
+
+                &:hover{
+                    color: $Dark-blue;
+                }
             }
         }
         
