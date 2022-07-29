@@ -5,104 +5,118 @@ $Bright-blue: hsl(245, 75%, 52%);
 $Very-pale-blue: hsl(225, 100%, 98%);
 $Desaturated-blue: hsl(224, 23%, 55%);
 $Dark-blue: hsl(223, 47%, 23%);
+$breakpoint: 375px;
 
 body {
     background-image: url('images/pattern-background-desktop.svg');
-    background-repeat: space;
-}
+    background-repeat: no-repeat;
+    background-size: auto;
 
-main{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Red Hat Display';
-
-    .card{
-        width: 400px;
-        height: 580px;
-        background-color: $Very-pale-blue;
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 6px 50px -25px;
-
-        p{
-            font-size: 16px;
-            color: $Desaturated-blue;
-        }
-
-        .illustration-hero{
-            width: 100%;
-        }
-
-        .card-content{
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            justify-content: space-between;
-            height: 100%;
-            padding: 30px 20px 30px;
-
-            .title{
-                font-weight: 900;
+    main{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Red Hat Display';
+    
+        .card{
+            width: 370px;
+            height: 580px;
+            background-color: $Very-pale-blue;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 6px 50px -25px;
+    
+            p{
+                font-size: 16px;
+                color: $Desaturated-blue;
             }
-
-            .plan{
+    
+            .illustration-hero{
+                width: 100%;
+            }
+    
+            .card-content{
                 display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                align-items: center;
-
-                .annual-plan{
+                flex-direction: column;
+                text-align: center;
+                justify-content: space-between;
+                height: 100%;
+                padding: 30px 20px 30px;
+    
+                .title{
+                    font-weight: 900;
+                }
+    
+                .plan{
                     display: flex;
-                    flex-direction: column;
-                    line-height: 0.2cm;
-
-                    .plan-type{
-                        color: black;
-                        font-weight: 900;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: center;
+    
+                    .annual-plan{
+                        display: flex;
+                        flex-direction: column;
+                        line-height: 0.2cm;
+    
+                        .plan-type{
+                            color: black;
+                            font-weight: 900;
+                        }
+                    }
+    
+                    .change-plan{
+                        font-weight: 700;
+                        font-size: 14px;
+                        color: $Bright-blue;
+    
+                        &:hover{
+                            text-decoration: none;
+                            color: $Desaturated-blue;
+                        }
                     }
                 }
-
-                .change-plan{
+    
+                .payment-button{
+                    background-color: $Bright-blue;
+                    color: $Very-pale-blue;
+                    width: 85%;
+                    height: 40px;
+                    align-self: center;
+                    font-size: 14px;
+                    font-weight: 700;
+    
+                    &:hover{
+                        background-color: $Desaturated-blue;
+                    }
+                }
+    
+                .cancel-order{
+                    text-decoration: none;
+                    color: $Desaturated-blue;
                     font-weight: 700;
                     font-size: 14px;
-                    color: $Bright-blue;
-
+    
                     &:hover{
-                        text-decoration: none;
-                        color: $Desaturated-blue;
+                        color: $Dark-blue;
                     }
                 }
             }
-
-            .payment-button{
-                background-color: $Bright-blue;
-                color: $Very-pale-blue;
-                width: 85%;
-                height: 40px;
-                align-self: center;
-                font-size: 14px;
-                font-weight: 700;
-
-                &:hover{
-                    background-color: $Desaturated-blue;
-                }
-            }
-
-            .cancel-order{
-                text-decoration: none;
-                color: $Desaturated-blue;
-                font-weight: 700;
-                font-size: 14px;
-
-                &:hover{
-                    color: $Dark-blue;
-                }
-            }
+            
         }
-        
+    
+        @media (max-width: $breakpoint) {
+            body{
+                background-image: url('images/pattern-background-mobile.svg');
+            }
+
+            .card{
+                width: 330px;
+            } 
+            
+        }
     }
 }
+
 
